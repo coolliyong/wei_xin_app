@@ -1,0 +1,156 @@
+<view class="container">
+  <!--tab按钮-->
+  <view class="slide_btn">
+    <block wx:for="{{titles}}">
+      <view class="slide_li {{index==sel_index? 'sel_tab':'' }}" catchtap="sel" data-index='{{index}}'>
+        <text>{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <!--tab 全部-->
+  <view class="indent_num top_b" wx:if="{{!datalist_data.length}}">
+    <image src="../imgs/not_indent.png"></image>
+    <text>暂无订单信息</text>
+  </view>
+  <block>
+    <!--订单-->
+    <view class="{{sel_index!=4? 'slide_main':'slide_main hide'}}" wx:for="{{datalist_data}}" wx:for-index="index">
+      <view class="indent">
+        <view class="indent_num">
+          <text>{{item.out_trade_no}}</text>
+        </view>
+        <view class="indent_state">
+          <text wx:if="{{item.status == '1'}}">等待付款</text>
+          <text wx:if="{{item.status == '2'}}">取消付款</text>
+          <text wx:if="{{item.status == '3'}}">付款失败</text>
+          <text wx:if="{{item.status == '4'&&item.status_confirm=='1'}}">待发货</text>
+          <text wx:if="{{item.status == '4'&&item.status_confirm=='2'}}">待收货</text>
+          <text wx:if="{{item.status == '4'&&item.status_confirm=='3'}}">完成购买</text>
+        </view>
+      </view>
+      <view class="moods" wx:for="{{item.goods}}" wx:for-item="v" wx:for-index="k">
+        <view class="mood_list">
+          <!--商品-->
+          <navigator url="../dateils/dateils?id={{v.goods_id}}">
+            <view class="mood_main_left">
+              <image src="{{r_url}}{{v.thumb}}" mode="aspectFill"></image>
+            </view>
+            <view class="mood_main_right">
+              <view class="new_main_title">
+                <text>{{v.title}}</text>
+              </view>
+              <view class="new_main_intro">
+                <text>{{v.subtitle}}</text>
+              </view>
+            </view>
+            <view class="new_main_money">
+              <view class="money">
+                <text>￥{{v.price}}</text>
+              </view>
+              <view class="s_num">
+                <text>x{{v.numbs}}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+      <view class="total">
+        <view class="all_shop">
+          <text>共{{item.goods.length}}件商品</text>
+        </view>
+        <view class="all_money">
+          <text>实付:￥{{item.amount}}</text>
+        </view>
+      </view>
+      <view class="btns">
+        <view class="btn_a" data-index='{{index}}' wx:if="{{item.status == 4&&item.status_confirm != 1 && sel_index != 4}}" catchtap="express_num">
+          <text>快递单号</text>
+        </view>
+        <view class="btn_a" catchtap="two_buy" data-index="{{index}}" wx:if="{{item.status != 1}}">
+          <text>再次购买</text>
+        </view>
+        <view class="btn_a" catchtap="continue_buy" data-index="{{index}}" wx:if="{{item.status == 1}}">
+          <text>继续购买</text>
+        </view>
+        <view class="btn_b" wx:if="{{item.status == 4&&item.status_confirm == 2}}" data-index='{{index}}' catchtap="affirm">
+          <text>确认收货</text>
+        </view>
+        <view class="btn_b" bindtap="discuss" wx:if="{{item.status == 4&&item.status_confirm == 3&&sel_index != 0}}" data-index="{{index}}">
+          <text>立即评价</text>
+        </view>
+      </view>
+    </view>
+    <!--待评价-->
+    <view class="{{sel_index==4? 'slide_main':'slide_main hide'}}" wx:for="{{datalist_data}}">
+      <view class="indent">
+        <view class="indent_num">
+          <text>{{item.order_id}}</text>
+        </view>
+        <view class="indent_state">
+          <text>付款成功</text>
+        </view>
+      </view>
+      <view class="moods">
+        <view class="mood_list">
+          <navigator url="../dateils/dateils?id={{item.goods_id}}">
+            <view class="mood_main_left">
+              <image src="{{r_url}}{{item.thumb}}"></image>
+            </view>
+            <view class="mood_main_right">
+              <view class="new_main_title">
+                <text>{{item.title}}</text>
+              </view>
+              <view class="new_main_intro">
+                <text>{{item.subtitle}}</text>
+              </view>
+            </view>
+            <view class="new_main_money">
+              <view class="money">
+                <text>￥{{item.price}}</text>
+              </view>
+              <view class="s_num">
+                <text>x{{item.numbs}}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+      <view class="total">
+        <view class="all_money">
+          <text>实付:￥{{item.price}}</text>
+        </view>
+      </view>
+      <view class="btns">
+        <view class="btn_a" data-index='{{index}}' catchtap="express_num" wx:if="{{sel_index != 4}}">
+          <text>快递单号</text>
+        </view>
+        <view class="btn_a" catchtap="two_buy" data-index="{{index}}">
+          <text>再次购买</text>
+        </view>
+        <view class="btn_b" bindtap="discuss" data-index="{{index}}">
+          <text>立即评价</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!--快递单号-->
+<view class="mask" wx:if="{{discuss}}">
+  <view class="mask_main">
+    <view class="mask_title">
+      <view class="indent_s_num">
+        <text>订单编号：{{express_nums}}</text>
+      </view>
+      <view class="mask_close" bindtap="close_discuss">
+        <image src="../imgs/ico_close.png"></image>
+      </view>
+    </view>
+    <view class="discuss">
+      <textarea bindblur='disuess_txt' />
+    </view>
+    <view class="submit_discuss" catchtap="submit_dis">
+      <text>提交评论</text>
+    </view>
+  </view>
+</view>

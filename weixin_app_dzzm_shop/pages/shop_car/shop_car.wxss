@@ -1,0 +1,271 @@
+/*购物车*/
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.no {
+  margin-top: 65rpx;
+  color: #555;
+  font-size: 40rpx;
+  letter-spacing: 15rpx;
+}
+
+.title_main {
+  display: flex;
+  width: 100%;
+  height: 34px;
+  margin: 0 28rpx;
+  overflow: hidden;
+  justify-content: space-between;
+  line-height: 20rpx;
+}
+
+.not_data {
+  margin-top: 94rpx;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.not_data image {
+  width: 238rpx;
+  height: 238rpx;
+}
+
+.not_data text {
+  color: #c9c9c9;
+  font-size: 30rpx;
+  margin-top: 46rpx;
+  text-align: center;
+  letter-spacing: 5rpx;
+}
+
+.title_main>view {
+  display: inline-flex;
+  color: #f04848;
+  font-size: 30rpx;
+  margin-right: 20rpx;
+}
+
+.title_main text {
+  display: flex;
+  color: #a1a1a1;
+  font-size: 30rpx;
+  margin: 18rpx 0;
+}
+
+.pay {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  line-height: 30rpx;
+}
+
+.pay image {
+  width: 20rpx;
+  height: 26rpx;
+  margin: 2rpx;
+}
+
+.shop_main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-bottom: 150rpx;
+}
+
+.shop_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 28rpx;
+  box-sizing: border-box;
+  border-bottom: 12rpx solid rgb(243, 243, 243);
+}
+
+.shop_list navigator {
+  display: flex;
+  width: 600rpx;
+  flex-direction: row;
+}
+
+.shop_list checkbox-group {
+  box-sizing: border-box;
+  display: flex;
+  /*margin: 28rpx 24rpx;*//*margin-top: 22rpx;*/
+  flex-direction: column;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox checkbox {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 94rpx 28rpx 0 0;
+}
+
+.shop_img {
+  width: 235rpx;
+  height: 235rpx;
+}
+
+.shop_img image {
+  width: 234rpx;
+  height: 234rpx;
+}
+
+.shop_intro {
+  display: flex;
+  margin-top: 58rpx;
+  flex-direction: column;
+  width: 280rpx;
+}
+
+.shop_info {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.shop_title text {
+  font-size: 30rpx;
+  color: #555;
+  line-height: 30rpx;
+  font-weight: bold;
+  width: 280rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.shop_info text {
+  color: #909090;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 12rpx;
+}
+
+.shop_money text {
+  color: #f04848;
+  font-size: 26rpx;
+  line-height: 30rpx;
+}
+
+.shop_num {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 58rpx;
+  color: #a1a1a1;
+  font-size: 26rpx;
+  line-height: 30rpx;
+}
+
+.shop_num text {
+  text-align: center;
+}
+
+.shop_num image {
+  padding: 30rpx;
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.shop_txt {
+  display: flex;
+  width: 500rpx;
+  margin-left: 34rpx;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  flex-direction: row;
+  border-top: 1px solid #eee;
+  justify-content: space-around;
+  background: #fff;
+}
+
+.foot_left {
+  display: flex;
+  flex-direction: column;
+}
+
+.foot_left checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.all_check {
+  display: flex;
+  flex-direction: column;
+  margin-left: 28rpx;
+}
+
+.all_check text {
+  font-size: 28rpx;
+  color: #555;
+  line-height: 28rpx;
+  margin-bottom: 18rpx;
+}
+
+.all_check checkbox {
+  margin: 22rpx 0 10rpx 5rpx;
+}
+
+.foot_right {
+  display: flex;
+  flex-direction: row;
+  width: 500rpx;
+  justify-content: flex-end;
+}
+
+.max_info {
+  display: flex;
+  margin: 35rpx 0;
+  flex-direction: column;
+  text-align: right;
+}
+
+.max_money {
+  color: #f04848;
+  font-size: 28rpx;
+  line-height: 28rpx;
+}
+
+.max_freight {
+  margin-top: 22rpx;
+  font-size: 24rpx;
+  color: #a1a1a1;
+  line-height: 24rpx;
+  align-items: center;
+}
+
+.now_buy {
+  display: flex;
+  width: 150rpx;
+  height: 90rpx;
+  margin: 20rpx;
+  line-height: 90rpx;
+  justify-content: center;
+  color: #fff;
+  background: #f04848;
+}
+
+.proto_money {
+  color: #f04848 !important;
+}

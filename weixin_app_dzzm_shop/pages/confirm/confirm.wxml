@@ -1,0 +1,110 @@
+<!--确认订单-->
+<view class="container">
+  <view class="title">
+    <view class="max_ico">
+      <image src="../imgs/ico_max.png"></image>
+    </view>
+    <view class="right_info">
+      <view class="intro" wx:if="{{indent.addr}}" catchtap="sel_address">
+        <view class="name">
+          <text>{{indent.addr.username}}</text>
+        </view>
+        <view class="address">
+          <text>{{indent.addr.province}}</text>
+          <text>{{indent.addr.city}}</text>
+          <text>{{indent.addr.detail}}</text>
+        </view>
+      </view>
+      <view class="phones" wx:if="{{indent.addr}}" catchtap="sel_address">
+        <view class=" phone ">
+          <text>{{indent.addr.mobile}}</text>
+        </view>
+        <view class="other_address">
+          <view class="address_txt">
+            <text>其他地址</text>
+          </view>
+          <view class="other_ico">
+            <image src="../imgs/ico_next4.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="add_address" wx:if="{{!indent.addr}}" catchtap="new_address">
+        <text>您还没有收货地址，点击去创建吧</text>
+      </view>
+    </view>
+  </view>
+  <view class="title_border">
+    <view class="bor_bottom" wx:for="{{[1,1,1,1,1,1,1]}}">
+      <image src="../imgs/bor_bottom.png"></image>
+    </view>
+  </view>
+  <view class="pay_info">
+    <view class="pay ">
+      <view class="pay_main ">
+        <view class="txt ">
+          <text>支付方式</text>
+        </view>
+        <view class="txt ">
+          <text>微信支付</text>
+        </view>
+      </view>
+    </view>
+    <view class="pay ">
+      <view class="pay_main ">
+        <view class="txt ">
+          <text>商品合计</text>
+        </view>
+        <view class="txt ">
+          <text>￥{{indent.total_fee}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="pay ">
+      <view class="pay_main ">
+        <view class="txt ">
+          <text>运费</text>
+        </view>
+        <view class="txt ">
+          <text>￥{{indent.freight_fee}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--商品-->
+  <view class="shop_main">
+    <view class="shop_list " wx:for="{{indent.goods}}">
+      <view class="shop_img ">
+        <image src="{{r_url}}{{item.thumb}} "></image>
+      </view>
+      <view class="shop_txt ">
+        <view class="shop_intro ">
+          <view class="shop_title ">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="shop_info ">
+            <text>{{item.subtitle}}</text>
+          </view>
+        </view>
+        <view class="moneys ">
+          <view class="shop_money ">
+            <text>￥{{item.price}}</text>
+          </view>
+          <view class="shop_num ">
+            <text>x{{item.numbs }}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--底部-->
+<view class="footer ">
+  <view class="foot_left ">
+    <text>实付￥{{max_money}}</text>
+  </view>
+  <view class="pay_btn " catchtap="now_buy">
+    <text>去付款</text>
+  </view>
+</view>

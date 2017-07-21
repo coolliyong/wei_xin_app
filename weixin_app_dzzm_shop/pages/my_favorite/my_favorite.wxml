@@ -1,0 +1,31 @@
+<!--我的收藏-->
+
+<view class="container">
+  <view class="main">
+    <view class="indent_num top_b" wx:if="{{!data_list.length}}">
+      <image src="../imgs/ico_not.png"></image>
+      <text>暂无收藏</text>
+    </view>
+    <view class="main_list" wx:for="{{data_list}}" wx:for-index="k1" wx:for-item="v1">
+      <navigator url="../dateils/dateils?id={{v1.goods_id}}" hover-class="none">
+        <view class="shop_img">
+          <image src="{{r_url}}{{v1.thumb}}"></image>
+        </view>
+        <view class="shop_intro">
+          <view class="shop_title">
+            <text>{{v1.title}}</text>
+          </view>
+          <view class="shop_info">
+            <text>{{v1.subtitle}}</text>
+          </view>
+          <view class="shop_money">
+            <text>￥{{v1.price}}</text>
+          </view>
+        </view>
+      </navigator>
+      <view class="shop_edit" catchtap="del_favorite" data-index="{{k1}}">
+        <text>删除</text>
+      </view>
+    </view>
+  </view>
+</view>

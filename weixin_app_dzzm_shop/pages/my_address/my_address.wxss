@@ -1,0 +1,161 @@
+/**index.wxss**/
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+view {
+  display: flex;
+}
+
+page {
+  background: #f3f3f3;
+}
+
+.main {
+  width: 100%;
+  flex-direction: column;
+  padding-top: 10rpx;
+}
+
+.top_b {
+  display: flex;
+  margin: 50rpx 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_b image {
+  width: 194rpx;
+  height: 238rpx;
+}
+
+.top_b text {
+  color: #c9c9c9;
+  font-size: 30rpx;
+  margin-top: 46rpx;
+  letter-spacing: 5rpx;
+}
+
+.main_list {
+  width: 100%;
+  /*padding: 28rpx;*//*height: 73px;*/
+  box-sizing: border-box;
+  flex-direction: row;
+  overflow: hidden;
+  /*border-bottom: 1px solid #eee;*/
+  background: #fff;
+  justify-content: space-between;
+}
+
+.sel_ico {
+  margin-top: 20rpx;
+  flex-direction: row;
+  /*margin-left: 52rpx;*/
+  padding: 28rpx;
+  width: 38rpx;
+  height: 38rpx;
+}
+
+.sel_ico image {
+  width: 38rpx;
+  height: 38rpx;
+}
+
+.sel_info {
+  width: 740rpx;
+  padding: 28rpx;
+  flex-direction: column;
+}
+
+.name {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name-txt {
+  font-size: 36rpx;
+  color: #555;
+  line-height: 36rpx;
+}
+
+.phonts_txt {
+  color: #555;
+  margin-top: 4rpx;
+  font-size: 26rpx;
+}
+
+.address {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.address text {
+  margin-right: 5rpx;
+  color: #989898;
+  font-size: 26rpx;
+  line-height: 26rpx;
+}
+
+.default text {
+  color: #f04848;
+  font-size: 24rpx;
+}
+
+.del text {
+  margin-top: 20rpx;
+  color: red;
+  margin-left: 10rpx;
+}
+
+.add {
+  width: 100%;
+  justify-content: center;
+  background: #fff;
+}
+
+.add_main {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add text {
+  color: #555;
+  font-size: 38rpx;
+  margin: 28rpx 0;
+}
+
+.add_edit {
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: row-reverse;
+  background: #fff;
+  margin-bottom: 28rpx;
+}
+
+.edit_btns {
+  width: calc(100% - 56rpx);
+  margin: 0 auto;
+  border-top: 1px solid #eee;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.edit_btn {
+  padding: 18rpx 15rpx;
+}
+
+.edit_btn image {
+  width: 24rpx;
+  height: 24rpx;
+  margin-top: 6rpx;
+}
+
+.edit_btn text {
+  color: #989898;
+  margin-left: 18rpx;
+  font-size: 26rpx;
+}

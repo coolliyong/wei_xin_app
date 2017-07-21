@@ -1,0 +1,79 @@
+<view class="container">
+  <!--<view class="title">
+    <view class="title_main">
+      <text>再购￥25.00可免邮</text>
+      <view class="pay">
+        <view catchtap="so_shop">去凑单</view>
+        <image src="../imgs/ico_next3.png"></image>
+      </view>
+    </view>
+  </view>-->
+  <view class="not_data" wx:if="{{!cars.length}}">
+    <image src="../imgs/not_shop_car.png"></image>
+    <text>购物车暂无商品</text>
+  </view>
+  <view class="shop_main">
+    <view class="shop_list" wx:for="{{cars}}">
+      <checkbox-group>
+        <label class="checkbox">
+          <checkbox value="{{item.id}}" checked="{{sel[index]}}" data-index="{{index}}" catchtap="a_sel" />
+        </label>
+      </checkbox-group>
+      <navigator url="../dateils/dateils?id={{item.goods_id}}" hover-class="none">
+        <view class="shop_img">
+          <image src="{{r_url}}{{item.thumb}}" mode="aspectFill"></image>
+        </view>
+        <view class="shop_txt">
+          <view class="shop_intro">
+            <view class="shop_title">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="shop_info">
+              <block wx:for="{{item.goods_attr}}">
+                <text>{{item.name}}</text>
+                <text class="proto_money">{{item.price}}</text>
+              </block>
+            </view>
+            <view class="shop_money">
+              <text>{{item.total_fee}}</text>
+            </view>
+          </view>
+          <view class="shop_num">
+            <text>x{{item.numbs}}</text>
+            <image src="../imgs/ico_del.png" catchtap="del_shop_car" data-index="{{index}}"></image>
+          </view>
+        </view>
+      </navigator>
+
+    </view>
+  </view>
+</view>
+
+<!--底部-->
+<view class="footer ">
+  <view class="foot_left ">
+    <checkbox-group>
+      <view class="all_check" catchtap="sel_all">
+        <checkbox value="99" checked="{{all_sel}}" />
+        <text>全选</text>
+      </view>
+    </checkbox-group>
+  </view>
+
+
+  <view class="foot_right ">
+    <view class="max_info ">
+      <view class="max_money">
+        总计：¥{{max_money}}({{max_num}}件)
+      </view>
+      <view class="max_freight">不含
+        <text class="max_money" style="line-height:0;">
+          ¥12
+        </text>
+        元运费
+      </view>
+
+    </view>
+  </view>
+  <view class="now_buy" catchtap="buy">结算</view>
+</view>

@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="main">
+    <block wx:for="{{shop_list}}">
+      <view class="product_list" catchtap="dateild" data-index="{{index}}">
+        <image src="../imgs/ico_add.png" class="ico_add"></image>
+        <image src="{{r_url}}{{item.thumb}}" class="product_img" data-index='{{index}}' mode="scaleToFill"></image>
+        <view class="product_box">
+          <text class="shop_title">{{item.title}}</text>
+          <text class="shop_info">{{item.subtitle}}</text>
+          <text class="shop_money">￥{{item.price}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- <view class="container">
+  <view class="main">
+    <view class="shop_main">
+      <block wx:for="{{shop_list}}">
+        <view class="shop_list" catchtap="dateild" data-index="{{index}}">
+          <image src="{{r_url}}{{item.thumb}}" mode="aspectFill"></image>
+          <text class="shop_title">{{item.title}}</text>
+          <text class="shop_info">{{item.subtitle}}</text>
+          <text class="shop_money">￥{{item.price}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view> -->
+
+<image src="../imgs/position_car.png" class="position_car" wx:if="{{show_cars}}" catchtap="goto_shopcar"></image>

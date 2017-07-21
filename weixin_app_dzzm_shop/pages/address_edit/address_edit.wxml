@@ -1,0 +1,71 @@
+<!--新增地址-->
+<view class="container">
+  <view class="pay_info">
+    <view class="pay">
+      <view class="pay_main">
+        <view class="txt">
+          <text style="letter-spacing:10rpx;">收货人：</text>
+        </view>
+        <view class="txt">
+          <input value="" placeholder="请输入收货人姓名" maxlength='8' confirm-type='next' bindblur="d_name" value="{{name}}" />
+        </view>
+      </view>
+    </view>
+    <view class="pay">
+      <view class="pay_main">
+        <view class="txt">
+          <text>联系电话：</text>
+        </view>
+        <view class="txt">
+          <input placeholder="请输入收货人电话号码" maxlength="11" type="number" bindblur="d_phone" value="{{phone}}" />
+        </view>
+      </view>
+    </view>
+    <view class="pay">
+      <view class="pay_main">
+        <view class="txt">
+          <text>所在地区：</text>
+        </view>
+        <view class="txt">
+          <view class="section">
+            <view class="section__title"></view>
+            <picker mode="selector" bindchange="selectedProvince" value="{{index}}" range="{{arrayProvince}}">
+              <view>{{province}}</view>
+            </picker>
+            <picker mode="selector" bindchange="selectedCity" value="{{index}}" range="{{arrayCity}}">
+              <view>{{city}}</view>
+            </picker>
+            <picker mode="selector" bindchange="selectedDistrict" value="{{index}}" range="{{arrayDistrict}}">
+              <view>{{district}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="pay">
+      <view class="pay_main">
+        <view class="txt">
+          <text>详细地址：</text>
+        </view>
+        <view class="txt">
+          <input value="{{a_ddress}}" placeholder="请输入您的详细地址" bindchange="d_address" />
+        </view>
+      </view>
+    </view>
+    <view class="pay">
+      <view class="pay_main">
+        <view class="txt" catchtap="toggle_save">
+          <image wx:if="{{def}}" src=" ../imgs/ico_sel_ok.png " class="sel "></image>
+          <image wx:if="{{!def}}" src="../imgs/ico_sel_not.png " class="sel "></image>
+        </view>
+        <view class="txt ">
+          <text>设为默认地址</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="save " catchtap="save">
+    <text>保存</text>
+  </view>
+</view>

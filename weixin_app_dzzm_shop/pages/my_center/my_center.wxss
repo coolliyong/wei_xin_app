@@ -1,0 +1,157 @@
+view {
+  display: flex;
+}
+
+image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+page {
+  background: rgb(243, 243, 243);
+}
+
+navigator {
+  display: block;
+}
+
+.title {
+  width: 100%;
+  padding: 28rpx;
+  box-sizing: border-box;
+  background: rgb(240, 72, 72);
+  flex-direction: row;
+  align-items: center;
+}
+
+.photo image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 100rpx;
+}
+
+.hide {
+  display: none !important;
+}
+
+.name {
+  color: #fff;
+  font-size: 46rpx;
+  margin-left: 28rpx;
+  letter-spacing: 5rpx;
+}
+
+.my_order {
+  width: 100%;
+  font-size: 36rpx;
+  color: #555;
+  box-sizing: border-box;
+  line-height: 36rpx;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.my_order navigator {
+  padding: 28rpx;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my_order image {
+  width: 23rpx;
+  height: 35rpx;
+}
+
+.icos {
+  width: 100%;
+  flex-direction: row;
+  padding: 40rpx 0;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.ico {
+  width: 130rpx;
+  margin: 25rpx 15rpx;
+  flex-direction: column;
+  align-content: center;
+}
+
+.ico navigator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*align-content: center;*/
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.ico text {
+  color: #555;
+  text-align: center;
+  margin-top: 10rpx;
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 28rpx;
+}
+
+.ico image {
+  width: 60rpx;
+  height: 57rpx;
+}
+
+.ico_num {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: -10rpx;
+  right: 5rpx;
+  background: rgb(240, 72, 72);
+  border-radius: 20rpx;
+}
+
+.ico_num text {
+  color: #fff;
+  line-height: 0;
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.message {
+  width: 100%;
+  margin-top: 28rpx;
+  flex-direction: column;
+}
+
+.my_collect {
+  width: 100%;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.my_collect text {
+  margin: 28rpx 0;
+  color: #555;
+  font-size: 32rpx;
+}
+
+.my_collect navigator {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.next_ico {
+  width: 23rpx;
+  height: 35rpx;
+  margin: 36rpx 0;
+}

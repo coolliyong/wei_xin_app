@@ -1,0 +1,27 @@
+<!--评论-->
+<view class="container">
+  <!--评论-->
+  <view class="indent_num top_b" wx:if="{{!spdata.user_comments}}">
+    <image src="../imgs/not_indent.png"></image>
+    <text>暂无评论</text>
+  </view>
+  <block wx:for="{{spdata.user_comments}}">
+    <!--评论主题-->
+    <view class="discuss_item">
+      <view class="discuss_list">
+        <view class="discuss_left">
+          <view class="discuss_user">
+            <image src="{{item.avatarurl}}"></image>
+            <text>{{item.username}}</text>
+          </view>
+        </view>
+        <view class="discuss_time">
+          <text>{{item.create_time}}</text>
+        </view>
+      </view>
+      <view class="discuss_txt">
+        <text>{{item.content}}</text>
+      </view>
+    </view>
+  </block>
+</view>

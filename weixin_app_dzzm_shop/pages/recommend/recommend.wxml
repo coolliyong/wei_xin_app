@@ -1,0 +1,16 @@
+<!--人气推荐-->
+<view class="container">
+  <view class="banner">
+    <image src="{{banner}}" mode="aspectFill"></image>
+  </view>
+  <view class="shop_main">
+    <block wx:for="{{data_list}}">
+      <view class="shop_list" catchtap="shop_datails" data-index="{{index}}">
+        <image src="{{r_url}}{{item.thumb}}" mode="aspectFill"></image>
+        <text class="shop_title">{{item.title}}</text>
+        <text class="infos">{{item.subtitle}}</text>
+        <text class="shop_money">￥{{item.price}}</text>
+      </view>
+    </block>
+  </view>
+</view>

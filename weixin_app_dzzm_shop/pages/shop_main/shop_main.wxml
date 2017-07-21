@@ -1,0 +1,121 @@
+<!--index.wxml-->
+<view class="container">
+  <!--搜索-->
+  <view class="search">
+    <image src="../imgs/ico_search.png" class="ico_search"></image>
+    <input confirm-type="search" bindinput="search_input" />
+    <button class="search_btn" catchtap="search_btn">搜索</button>
+  </view>
+  <!--tab按钮-->
+  <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+    <view class="slide_btn">
+      <block wx:for="{{tabList}}">
+        <view class="{{index == tabListIndex ? 'slide_li sel_tab' : 'slide_li'}}" data-index="{{index}}" catchtap="tab_sel">
+          <text>{{item}}</text>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+  <!--tab  推荐-->
+  <block wx:for="{{tabList}}">
+    <view class="{{index == tabListIndex ? 'slide_main':'slide_main hide'}}" data-index='{{index}}'>
+      <!--swiper-->
+      <view class="slide_tab" wx:if="{{index == 0}}">
+        <swiper autoplay="true" indicator-dots="true" indicator-color="#909090" indicator-active-color="#fff">
+          <block wx:for="{{banners}}">
+            <swiper-item>
+              <image src="{{item}}" mode="aspectFill" class="slide_img" />
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <image src="{{banners[0]}}" mode="aspectFill" class="slide_tab" wx:if="{{index != 0}}" style="height:292rpx;width:100%;"></image>
+      <!--新品上市-->
+      <view class="new" wx:if="{{index == 0}}" catchtap="new_arrival">
+        <text class="new_text">新品上市</text>
+        <image src="../imgs/shop_banner1.png" class="new_bg" mode="aspectFill"></image>
+        <view class="look_all">
+          <navigator>
+            <text class="all_txt">查看全部</text>
+          </navigator>
+          <image src="../imgs/ico_next.png" class="ico_next"></image>
+        </view>
+      </view>
+
+      <!--新品产品-->
+      <view class="new_main" wx:if="{{index == 0}}">
+        <view class="new_main_list" wx:for="{{new_product}}" wx:for-index="k" wx:for-item="v">
+          <view catchtap="new_dateils" data-index='{{k}}'>
+            <image src="{{r_url}}{{v.thumb}}" mode="aspectFill"></image>
+            <view class="new_main_title">
+              <text class="">{{v.title}}</text>
+            </view>
+            <view class="new_main_intro">
+              <text class="">{{v.subtitle}}</text>
+            </view>
+            <view class="new_main_money">
+              <text class="">{{v.price}}</text>
+            </view>
+          </view>
+        </view>
+
+      </view>
+
+      <!--人气推荐-->
+      <view class="new" catchtap="recommend_page">
+        <text class="new_text" style="color:#C030E1;">人气推荐</text>
+        <image src="../imgs/shop_banner2.png" class="new_bg" mode="aspectFill"></image>
+        <view class="look_all">
+          <navigator>
+            <text class="all_txt">查看全部</text>
+          </navigator>
+          <image src="../imgs/ico_next2.png" class="ico_next"></image>
+        </view>
+      </view>
+
+      <view class=" {{index == 0 ? 'moods':'moods hide'}}">
+        <view class="mood_list" wx:for="{{moods}}" wx:for-index="k" wx:for-item="v">
+          <view catchtap="moods_dateils" data-index='{{k}}' class="col">
+            <view class="mood_main_left">
+              <image src="{{r_url}}{{v.thumb}}" mode="aspectFill"></image>
+            </view>
+            <view class="mood_main_right">
+              <view class="new_main_title">
+                <text class="">{{v.title}}</text>
+              </view>
+              <view class="new_main_intro">
+                <text class="">{{v.subtitle}}</text>
+              </view>
+              <view class="new_main_money">
+                <text class="">{{v.price}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class=" {{index != 0 ? 'moods_two':'moods_two hide'}}">
+        <view class="mood_list" wx:for="{{moods}}" wx:for-index="k" wx:for-item="v">
+          <view catchtap="moods_dateils" data-index='{{k}}' class="main_list_two_list">
+            <view class="mood_main_left">
+              <image src="{{r_url}}{{v.thumb}}" mode="aspectFill"></image>
+            </view>
+            <view class="mood_main_right">
+              <view class="new_main_title">
+                <text class="">{{v.title}}</text>
+              </view>
+              <view class="new_main_money">
+                <text class="">{{v.price}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </block>
+
+</view>
+
+<image src="../imgs/position_car.png" class="position_car" wx:if="{{show_cars}}" catchtap="goto_shopcar"></image>

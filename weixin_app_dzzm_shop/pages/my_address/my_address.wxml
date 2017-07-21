@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="main">
+    <view class="indent_num top_b" wx:if="{{!addr_list.length}}">
+      <image src="../imgs/not_max.png"></image>
+      <text>暂无收货地址</text>
+    </view>
+    <block wx:for="{{addr_list}}">
+      <view class="main_list">
+        <view class="sel_ico" catchtap="sel_add" data-index="{{index}}">
+          <image wx:if="{{item.is_default == '1'}}" src="../imgs/ico_sel_ok.png"></image>
+          <image wx:if="{{item.is_default == '0'}}" src="../imgs/ico_sel_not.png"></image>
+        </view>
+        <view class="sel_info">
+          <view class="name">
+            <text class="name_txt">{{item.username}}</text>
+            <text class="phonts_txt">{{item.mobile}}</text>
+          </view>
+          <view class="add_main">
+            <view class="address">
+              <text>{{item.province}}</text>
+              <text>{{item.city}}</text>
+              <text>{{item.detail}}</text>
+            </view>
+            <view class="default" hidden="{{item.is_default != '1'}}">
+              <text>默认地址</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="add_edit">
+        <view class="edit_btns">
+          <view class="edit_btn" catchtap="del_fn" data-index="{{index}}">
+            <image src="../imgs/ico_del.png"></image>
+            <text>删除</text>
+          </view>
+          <view class="edit_btn" catchtap="edit_fn" data-index="{{index}}">
+            <image src="../imgs/ico_edit.png"></image>
+            <text>编辑</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="add" catchtap="new_add">
+    <text>添加新地址</text>
+  </view>
+</view>

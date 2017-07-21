@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <!--搜索-->
+  <view class="search">
+    <image src="../imgs/ico_search.png" class="ico_search"></image>
+    <input confirm-type="search" bindinput="search_input" value="{{search_val}}" />
+    <button class="search_btn" catchtap="search_btn">搜索</button>
+  </view>
+  <text class="search_txt" wx:if="{{not_data}}">没有搜索到您要的商品，去商城看一看吧！</text>
+  <view class=" moods_two">
+    <view class="mood_list" wx:for="{{search_list}}" wx:for-index="k" wx:for-item="v">
+      <view catchtap="moods_dateils" data-index='{{k}}' class="main_list_two_list">
+        <view class="mood_main_left">
+          <image src="{{r_url}}{{v.thumb}}" mode="scaleToFill"></image>
+        </view>
+        <view class="mood_main_right">
+          <view class="new_main_title">
+            <text class="">{{v.title}}</text>
+          </view>
+
+          <view class="new_main_info">
+            <text class="">{{v.subtitle}}</text>
+          </view>
+
+          <view class="new_main_money">
+            <text class="">{{v.price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

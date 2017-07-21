@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="list" catchtap="quit_shop">
+    <image src="../imgs/ico_quit.png"></image>
+    <text>申请退货</text>
+  </view>
+  <view class="list" catchtap="tel">
+    <image src="../imgs/ico_tel.png"></image>
+    <text>一键拨号</text>
+  </view>
+</view>

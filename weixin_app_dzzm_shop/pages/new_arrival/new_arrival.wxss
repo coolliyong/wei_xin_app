@@ -1,0 +1,82 @@
+/*新品上市*/
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 292rpx;
+  overflow: hidden;
+}
+
+.tab_list {
+  padding: 28rpx 92rpx;
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #eee;
+}
+
+.tab_list text {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.tab_list .slide_tab {
+  color: #f04848;
+}
+
+.tab_two {
+  flex-direction: row;
+}
+
+.tab_two image {
+  margin: 8rpx;
+  width: 20rpx;
+  height: 28rpx;
+}
+
+.shop_main {
+  width: 100%;
+  padding: 28rpx;
+  box-sizing: border-box;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.shop_list {
+  margin: 10rpx 0;
+  flex-direction: column;
+  width: 332rpx;
+}
+
+.shop_list image {
+  width: 332rpx;
+  height: 332rpx;
+}
+
+.shop_title {
+  padding: 10rpx 0 5rpx;
+  font-size: 35rpx;
+  color: #555;
+  box-sizing: border-box;
+}
+
+.shop_info {
+  width: 100%;
+  font-size: 24rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #909090;
+}
+
+.shop_money {
+  font-size: 28rpx;
+  color: #f04848;
+}

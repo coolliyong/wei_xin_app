@@ -1,0 +1,124 @@
+<!--详情页-->
+<import src="../wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="title">
+    <view class="slide_tab">
+      <swiper autoplay="{{false}}" indicator-dots="true" indicator-color="#909090" indicator-active-color="#fff" catchtap="lock_banner">
+        <swiper-item wx:for="{{shop_data.imgs}}">
+          <image src="{{r_url}}{{item}}" mode="scaleToFill" class="slide_img" />
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <view class="shop_intro">
+    <view class="shop_title">
+      <text>{{shop_data.title}}</text>
+    </view>
+    <view class="shop_info">
+      <text>{{shop_data.subtitle}}</text>
+    </view>
+    <view class="shop_money">
+      <text>￥{{money}}</text>
+    </view>
+  </view>
+  <!--规格数量-->
+  <view class="shop_main">
+    <!--<view class="shop_main_btn" catchtap="show_proto">
+      <view class="sel_btn">
+        <text>规格数量选择</text>
+      </view>
+      <view class="next_ico">
+        <image src="../imgs/ico_next3.png" class="{{data_show? 'rotate90':''}}"></image>
+      </view>
+    </view>-->
+    <view class="shop_main_intro">
+      <view class="shop_info_all">
+        <view class="shop_img">
+          <image src="{{r_url}}{{shop_data.thumb}}"></image>
+        </view>
+        <view class="shop_intro">
+          <view class="shop_title">
+            <text>{{shop_data.title}}</text>
+          </view>
+          <view class="shop_money">
+            <text>￥{{money}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="shop_proto">
+        <block wx:for="{{param}}" wx:for-index="idx" wx:for-item="val1">
+          <view class="proto">
+            <text class="protot_title">{{val1.name}}</text>
+            <block wx:for="{{val1.children}}">
+              <text class="{{index == param[idx].is_sel? 'sel_proto_class':''}}  protot_txt" catchtap="sel_proto" data-index="{{idx}},{{index}}" wx:if="{{item.name}}">{{item.name}}</text>
+            </block>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="shop_num">
+      <view class="protot_title">
+        <text>购买数量</text>
+      </view>
+      <view class="shop_num_edit">
+        <image src="../imgs/ico_remove2.png" catchtap="shop_number" data-edit='0'></image>
+        <text>{{shop_num}}</text>
+        <image src="../imgs/ico_add2.png" catchtap="shop_number" data-edit='1'></image>
+      </view>
+    </view>
+
+    <!--评论-->
+    <view class="discuss">
+      <view class="discuss_title" catchtap="look_discuss">
+        <text>评价({{discuss.length? discuss.length:'0'}})</text>
+        <view class="look">
+          <text>查看全部</text>
+          <image src="../imgs/ico_next3.png" class="next_ico"></image>
+        </view>
+      </view>
+
+      <block wx:for="{{show_discuss}}">
+        <!--评论主题-->
+        <view class="discuss_list">
+          <view class="discuss_left">
+            <view class="discuss_user">
+              <image src="{{item.avatarurl}}"></image>
+              <text>{{item.username}}</text>
+            </view>
+          </view>
+          <view class="discuss_time">
+            <text>{{item.create_time}}</text>
+          </view>
+        </view>
+        <view class="discuss_txt">
+          <text>{{item.content}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="rich_text">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>
+
+<!--底部按钮-->
+<view class="bottom_btns">
+  <view class="bottom_btn" catchtap="goto_shop_car">
+    <image src="../imgs/tab_cart_0.png" class="ico_btn"></image>
+    <text>购物车</text>
+  </view>
+  <view class="bottom_btn" catchtap="add_collect" wx:if="{{!is_colllect}}">
+    <image src="../imgs/icocollect_.png" class="ico_btn"></image>
+    <text>收藏</text>
+  </view>
+  <view class="bottom_btn" catchtap="add_collect" wx:if="{{is_colllect}}">
+    <image src="../imgs/icocollect_1.png" class="ico_btn"></image>
+    <text>已收藏</text>
+  </view>
+  <view class=" bottom_btn " catchtap="add_shop_car" data-action="1">
+    <text class="txt_btn buy ">立即购买</text>
+  </view>
+  <view class="bottom_btn" catchtap="add_shop_car" data-action="0">
+    <text class="txt_btn shop_car ">加入购物车</text>
+  </view>
+</view>

@@ -1,0 +1,102 @@
+/**index.wxss**/
+
+.container {
+  color: #222;
+  font-size: 65.5%;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+/*产品大板块*/
+
+.shop_main {
+  width: 100%;
+  padding: 28rpx;
+  box-sizing: border-box;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.shop_list {
+  margin: 10rpx 0;
+  flex-direction: column;
+  width: 332rpx;
+}
+
+.shop_list image {
+  width: 332rpx;
+  height: 332rpx;
+  border-radius: 15rpx;
+}
+
+.shop_title {
+  padding: 10rpx 0 5rpx;
+  font-size: 35rpx;
+  color: #555;
+  box-sizing: border-box;
+}
+
+.shop_info {
+  width: 100%;
+  font-size: 24rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #909090;
+}
+
+.shop_money {
+  font-size: 28rpx;
+  color: #f04848;
+}
+
+.product_list {
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  padding: 28rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+
+.product_list:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.product_list:nth-child(2n) .product_img {
+  margin: 0 28rpx;
+}
+
+.ico_add {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 28rpx 0 0;
+}
+
+.product_img {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.product_box {
+  flex-direction: column;
+  margin-left: 28rpx;
+  /* align-self: flex-start; */
+  justify-content: flex-end;
+  width: 200rpx;
+}
+
+.product_box text {
+  margin: 7rpx 0;
+}

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",   
+    "pages/my_address/my_address",
+    "pages/sel_address/sel_address",    
+    "pages/shop_car/shop_car",
+    "pages/address_new/address_new",
+    "pages/dateils/dateils",
+    "pages/my_favorite/my_favorite",
+    "pages/search/search",
+    "pages/my_center/my_center",
+    "pages/shop_main/shop_main",
+    "pages/quit_shop/quit_shop",
+    "pages/my_order/my_order",
+    "pages/shop_after/shop_after",
+    "pages/recommend/recommend",
+    "pages/new_arrival/new_arrival",
+    "pages/discuss/discuss",
+    "pages/confirm/confirm",
+    "pages/address_edit/address_edit"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F04848",
+    "navigationBarTitleText": "精品商场",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "精品商场",
+        "iconPath": "pages/imgs/tab_shop_0.png",
+        "selectedIconPath": "pages/imgs/tab_shop_1.png"
+      },
+      {
+        "pagePath": "pages/shop_main/shop_main",
+        "text": "商场",
+        "iconPath": "pages/imgs/tab_market_0.png",
+        "selectedIconPath": "pages/imgs/tab_market_1.png"
+      },
+      {
+        "pagePath": "pages/shop_car/shop_car",
+        "text": "购物车",
+        "iconPath": "pages/imgs/tab_cart_0.png",
+        "selectedIconPath": "pages/imgs/tab_cart_1.png"
+      },
+      {
+        "pagePath": "pages/my_center/my_center",
+        "text": "个人中心",
+        "iconPath": "pages/imgs/tab_me_0.png",
+        "selectedIconPath": "pages/imgs/tab_me_1.png"
+      }
+    ],
+    "color": "#333",
+    "borderStyle": "black",
+    "selectedColor": "#f25a5a"
+  },
+  "debug": true
+}

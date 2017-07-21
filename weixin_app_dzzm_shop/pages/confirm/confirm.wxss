@@ -1,0 +1,268 @@
+/**/
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+view {
+  display: flex;
+}
+
+page {
+  background: rgb(243, 243, 243);
+}
+
+.title {
+  width: 100%;
+  padding: 28rpx 0 16rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.max_ico image {
+  margin-top: 30rpx;
+  width: 30rpx;
+  height: 42rpx;
+}
+
+.max_ico {
+  margin-left: 28rpx;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60rpx;
+  /*width:440rpx;*/
+}
+
+.right_info {
+  width: 670rpx;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name text {
+  font-size: 36rpx;
+  color: #555;
+  line-height: 36rpx;
+  font-weight: blod;
+}
+
+.add_address text {
+  font-size: 36rpx;
+  color: #555;
+  margin: 30rpx;
+  font-weight: blod;
+}
+
+.address {
+  margin-top: 12rpx;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.address text {
+  font-size: 26rpx;
+  color: #555;
+  margin: 5rpx 0;
+  line-height: 26rpx;
+  margin-right: 5rpx;
+}
+
+.phones {
+  flex-direction: column;
+  text-align: right;
+}
+
+.phone text {
+  color: #555;
+  font-size: 26rpx;
+  line-height: 26rpx;
+}
+
+.other_address {
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-top: 56rpx;
+}
+
+.other_address text {
+  color: #f04848;
+  font-size: 22rpx;
+  line-height: 26rpx;
+}
+
+.other_ico {
+  width: 15rpx;
+  height: 26rpx;
+  margin: 3rpx 0 0 15rpx;
+}
+
+.title_border {
+  margin: 16rpx 0 0;
+  flex-direction: row;
+  height: 15rpx;
+  width: 100%;
+}
+
+.bor_bottom {
+  display: flex;
+  height: 10rpx;
+  width: 90rpx;
+  margin: 0 15rpx;
+}
+
+.pay_info {
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+}
+
+.pay {
+  /*flex-direction: row;*/
+  width: 100%;
+  box-sizing: border-box;
+  flex-direction: row;
+  padding: 0 28rpx;
+}
+
+.pay:last-child .pay_main {
+  border: none;
+}
+
+.pay_main {
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.txt {
+  font-size: 30rpx;
+  color: #555;
+  line-height: 30rpx;
+  margin: 28rpx 0;
+}
+
+.shop_main {
+  flex-direction: column;
+  background: #fff;
+  width: 100%;
+  margin-top: 25rpx;
+}
+
+.shop_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.shop_list checkbox-group {
+  width: 100%;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+  display: flex;
+  /*margin: 28rpx 24rpx;*//*margin-top: 22rpx;*/
+  flex-direction: column;
+}
+
+.checkbox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.checkbox checkbox {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 94rpx 28rpx 0 0;
+}
+
+.shop_img {
+  width: 235rpx;
+  height: 235rpx;
+}
+
+.shop_img image {
+  width: 234rpx;
+  height: 234rpx;
+}
+
+.shop_intro {
+  display: flex;
+  margin-top: 58rpx;
+  flex-direction: column;
+}
+
+.shop_title text {
+  font-size: 30rpx;
+  color: #555;
+  line-height: 30rpx;
+  font-weight: bold;
+}
+
+.shop_info text {
+  color: #a1a1a1;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  margin-top: 28rpx;
+}
+
+.shop_money text {
+  color: #f04848;
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+
+.shop_money {
+  flex-direction: row;
+}
+
+.shop_num {
+  display: flex;
+  margin-top: 28rpx;
+  color: #a1a1a1;
+  font-size: 26rpx;
+  line-height: 30rpx;
+}
+
+.shop_txt {
+  display: flex;
+  width: 435rpx;
+  margin-left: 34rpx;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.moneys {
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 58rpx;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.foot_left text {
+  padding: 28rpx;
+  color: #555;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.pay_btn text {
+  padding: 28rpx 56rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background: rgb(240, 72, 72);
+}

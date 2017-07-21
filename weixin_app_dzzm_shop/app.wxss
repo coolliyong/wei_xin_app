@@ -1,0 +1,73 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: 'pingfang sc regular',
+                 'Microsoft YaHei',
+                 'Franklin Gothic Medium',
+                 'Arial Narrow',
+                 Arial,
+                 sans-serif;
+}
+
+navigator {
+  background: #fff;
+  display: flex;
+}
+
+navigator-hover {
+  color: blue;
+}
+
+text {
+  font-family: 'pingfang sc regular',
+                 'Microsoft YaHei',
+                 'Franklin Gothic Medium',
+                 'Arial Narrow',
+                 Arial,
+                 sans-serif;
+}
+
+image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+view {
+  display: flex;
+  font-family: 'pingfang sc',
+                 'Microsoft YaHei',
+                 'Franklin Gothic Medium',
+                 'Arial Narrow',
+                 Arial,
+                 sans-serif;
+}
+
+.position_car {
+  position: fixed;
+  bottom: 95rpx;
+  right: 55rpx;
+  width: 70rpx;
+  height: 70rpx;
+  background: #fff;
+  border-radius: 35rpx;
+  box-shadow: 0 5rpx 10rpx #ca9b9b;
+}
+
+.hide {
+  display: none !important;
+}
+
+
+.row {
+  flex-direction: row;
+}
+.col {
+  flex-direction: column;
+}

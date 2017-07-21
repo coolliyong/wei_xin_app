@@ -1,0 +1,80 @@
+<!--个人中心-->
+<view class="container">
+  <view class="title">
+    <view class="photo">
+      <image src="{{userinfo.avatarUrl}}"></image>
+    </view>
+    <view class="name">
+      <text>{{userinfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="my_order">
+    <navigator url="../my_order/my_order">
+      <text>我的订单</text>
+      <image src="../imgs/ico_next3.png"></image>
+    </navigator>
+  </view>
+  <view class="icos">
+    <view class="ico">
+      <navigator url='../my_order/my_order?classes=1' hover-class="none">
+        <view class="ico_num" wx:if="{{arrearage>0}}">
+          <text>{{arrearage}}</text>
+        </view>
+        <image src="../imgs/ico_no_pay.png"></image>
+        <text>待付款</text>
+      </navigator>
+    </view>
+    <view class="ico">
+      <navigator url="../my_order/my_order?classes=2" hover-class="none">
+        <view class="ico_num" wx:if="{{unshipped>0}}">
+          <text>{{unshipped}}</text>
+        </view>
+        <image src="../imgs/ico_no_unshipped.png"></image>
+        <text>待发货</text>
+      </navigator>
+    </view>
+    <view class="ico">
+      <navigator url="../my_order/my_order?classes=3" hover-class="none">
+        <view class="ico_num" wx:if="{{shipped>0}}">
+          <text>{{shipped}}</text>
+        </view>
+        <image src="../imgs/ico_sent.png"></image>
+        <text>待收货</text>
+      </navigator>
+    </view>
+    <view class="ico">
+      <navigator url="../my_order/my_order?classes=4" hover-class="none">
+        <image src="../imgs/ico_evaluate.png"></image>
+        <text>待评价</text>
+      </navigator>
+    </view>
+    <view class="ico">
+      <navigator url="../shop_after/shop_after" hover-class="none">
+        <image src="../imgs/ico_after_sale.png"></image>
+        <text>售后服务</text>
+      </navigator>
+    </view>
+  </view>
+  <view class="message">
+    <view class="my_collect">
+      <navigator url="../my_favorite/my_favorite" hover-class="none">
+        <view class="txt">
+          <text>我的收藏</text>
+        </view>
+        <view class="next_ico">
+          <image src="../imgs/ico_next3.png"></image>
+        </view>
+      </navigator>
+    </view>
+    <view class="my_collect">
+      <navigator url="../my_address/my_address">
+        <view class="txt">
+          <text>我的地址</text>
+        </view>
+        <view class="next_ico">
+          <image src="../imgs/ico_next3.png"></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

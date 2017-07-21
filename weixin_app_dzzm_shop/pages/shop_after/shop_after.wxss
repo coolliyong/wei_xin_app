@@ -1,0 +1,26 @@
+/*售后服务*/
+
+page {
+  background: #eee;
+}
+
+.list {
+  width: 100%;
+  padding: 28rpx;
+  box-sizing: border-box;
+  flex-direction: row;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+
+.list image {
+  width: 54rpx;
+  height: 54rpx;
+}
+
+.list text {
+  margin-left: 22rpx;
+  color: #555;
+  font-size: 32rpx;
+  line-height: 1.7;
+}

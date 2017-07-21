@@ -1,0 +1,81 @@
+.discuss_list {
+  width: 100%;
+  padding: 28rpx;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.discuss_item {
+  width: 100%;
+  flex-direction: column;
+  border-bottom: 1rpx solid #eee;
+}
+
+.discuss_item:last-child {
+  border: none;
+}
+
+.discuss_left {
+  flex-direction: column;
+}
+
+.discuss_user {
+  flex-direction: row;
+}
+
+.discuss_user image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 45rpx;
+  display: flex;
+}
+
+.discuss_user text {
+  color: #555;
+  font-size: 32rpx;
+  line-height: 70rpx;
+  margin-left: 25rpx;
+}
+
+.discuss_time {
+  color: #555;
+  font-size: 32rpx;
+  line-height: 70rpx;
+  margin-left: 24rpx;
+}
+
+.discuss_txt {
+  color: #555;
+  width: 100%;
+  font-size: 32rpx;
+  line-height: 70rpx;
+  margin-top: 10rpx;
+  margin-left: 24rpx;
+}
+
+.discuss_txt text {
+  text-align: left;
+  color: #555;
+  font-size: 32rpx;
+  line-height: 70rpx;
+  margin-left: 24rpx;
+}
+
+.top_b {
+  margin-top: 50rpx;
+  flex-direction: column;
+}
+
+.top_b image {
+  width: 194rpx;
+  height: 238rpx;
+}
+
+.top_b text {
+  color: #c9c9c9;
+  font-size: 30rpx;
+  margin-top: 46rpx;
+  letter-spacing: 5rpx;
+}

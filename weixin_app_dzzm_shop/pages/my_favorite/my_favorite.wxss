@@ -1,0 +1,108 @@
+view {
+  display: flex;
+}
+
+image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  flex-direction: column;
+}
+
+.top_b {
+  display: flex;
+  margin-top: 50rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_b image {
+  width: 194rpx;
+  height: 238rpx;
+}
+
+.top_b text {
+  color: #c9c9c9;
+  font-size: 30rpx;
+  margin-top: 46rpx;
+  letter-spacing: 5rpx;
+}
+
+.main_list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 28rpx;
+  box-sizing: border-box;
+  border-bottom: 28rpx solid #eee;
+}
+
+.main_list:last-child {
+  border-bottom: none;
+}
+
+.main_list navigator {
+  display: flex;
+  flex-direction: row;
+}
+
+.shop_img {
+  width: 160rpx;
+  height: 160rpx;
+  overflow: hidden;
+}
+
+.shop_title text {
+  width: 280rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.shop_info text {
+  width: 280rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.shop_intro {
+  width: 280rpx;
+  margin: 22rpx 0 0 18rpx;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.shop_title {
+  font-size: 30rpx;
+  color: #555;
+}
+
+.shop_info {
+  font-size: 26rpx;
+  color: #a1a1a1;
+  margin: 5rpx 0;
+}
+
+.shop_money {
+  font-size: 26rpx;
+  color: #f04848;
+}
+
+.shop_edit {
+  width: 112rpx;
+  height: 52rpx;
+  margin-top: 38rpx;
+  background: rgb(240, 72, 72);
+  border: 1px solid rgb(240, 72, 72);
+  font-size: 26rpx;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
